@@ -16,7 +16,7 @@ that is not part of the default django template
 """
 
 from pathlib import Path
-from datatime import timedelta
+from datetime import timedelta
 from dotenv import load_dotenv
 import os
 
