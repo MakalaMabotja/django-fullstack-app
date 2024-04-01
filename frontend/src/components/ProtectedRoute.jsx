@@ -9,7 +9,7 @@ function ProtectedRoute ({children}) {
     const [isAuthorized, setIsAuthorized] = useState(null)
 
     useEffect(() => {
-        auth().catch(()=> setIsAuthorized(False))
+        auth().catch(()=> setIsAuthorized(false))
     }, [])
 
     const refreshToken = async () => {
@@ -43,7 +43,7 @@ function ProtectedRoute ({children}) {
         if (tokenExpiration < now ) {
             await refreshToken()
         } else {
-            setIsAuthorized(True)
+            setIsAuthorized(true)
         }
 
     }
